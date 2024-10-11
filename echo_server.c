@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 			char filename[BUFLEN];
 			read(new_sd, filename, sizeof(filename));
 			
-			FILE *file = fopen(filename, "rb");
+			FILE *file = fopen(filename, "r");
 			if (file == NULL) {
 				char errorMsg[MAX_PACKET_SIZE];
 				errorMsg[0] = '0';
