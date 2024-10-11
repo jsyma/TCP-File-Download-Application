@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 		}
 		else if (readData[0] == DATA_MARKER) {
 			// Open file to write data from server
-			FILE *outputFile = fopen(filename, "ab");
+			FILE *outputFile = fopen(filename, "w");
 			printf("Receiving %d bytes from server\n", bytesRead);
 			// Write the data after the data marker to the file
 			fwrite(readData + 1, 1, bytesRead - 1, outputFile);
